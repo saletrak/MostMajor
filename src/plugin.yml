@@ -1,0 +1,61 @@
+main: pl.saletrak.MostMajor.MMPlugin
+name: MostMajor
+version: 1.0
+author: saletrak
+description: No elo
+softdepend:
+- TTA
+- WorldGuard
+- HeadsPluginAPI
+- Vault
+- LuckPerms
+api-version: 1.14
+
+commands:
+  rubins:
+    usage: |
+      /rubins - Stan konta
+      /rubins pay <player> <amount> - Przelej pieniadze
+    permission: moneymaker.rubins
+    permission-message: You don't have the moneymaker.rubins permission.
+
+  zdrapka:
+    permission: moneymaker.scratch
+    description: Otworz zdrapke
+
+  scratch:
+    permission: moneymaker.scratch.admin
+    usage: |
+      /scratch set basic <player> <amount>
+      /scratch set premium <player> <amount>
+      /scratch set daily <player> <on|off>
+
+  kupzdrapke:
+    description: Kup zdrapke
+
+  nagrody:
+    uasge: |
+      /nagrody
+
+permissions:
+  moneymaker.rubins:
+    default: true
+  moneymaker.rubins.balance:
+    default: true
+  moneymaker.rubins.pay:
+    default: true
+  moneymaker.rubins.set:
+    default: op
+  moneymaker.rubins.balance.others:
+    default: op
+
+  moneymaker.scratch:
+    default: true
+  moneymaker.scratch.buy:
+    default: true
+  moneymaker.scratch.admin:
+    default: op
+  moneymaker.scratch.admin.set:
+    default: op
+  moneymaker.scratch.infinite:
+    default: op
